@@ -1,0 +1,14 @@
+I=imread('images/eifelTower.jpg');
+H1=fspecial('unsharp');
+H2=fspecial('average');
+H3=fspecial('gauss');
+H4=fspecial('laplacian');
+USM1=imfilter(I,H1);
+USM2=imfilter(I,H2);
+USM3=imfilter(I,H3);
+USM4=imfilter(I,H4);
+subplot(2,2,1);imshow(rgb2gray(I));hold on;
+subplot(2,2,2);imshow(rgb2gray(USM1));hold on;
+subplot(2,2,3);imshow(rgb2gray(USM2));hold on;
+subplot(2,2,4);imshow(rgb2gray(USM3));hold on;
+subplot(2,2,5);imshow(rgb2gray(USM4));
