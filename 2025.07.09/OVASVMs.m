@@ -1,4 +1,4 @@
-function accuracy = OVASVNs(data,N)
+function accuracy = OVASVMs(data,N)
 
 [trainData,testData] = splitData(data);
 %[trainData,testData] = scaleData(trainData,testData);
